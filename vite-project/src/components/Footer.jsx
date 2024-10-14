@@ -7,7 +7,7 @@ function Footer() {
     <footer className="footer bg-dark text-white">
       <Container fluid className="py-3 d-flex justify-content-start">
         <p className="mb-0">
-          Connect with me on 
+          Connect with me on: 
           <a href="https://github.com" className="text-white mx-2" target="_blank" rel="noopener noreferrer">
             <GitHub size={24} />
           </a>
