@@ -29,32 +29,35 @@ function Contact() {
   };
 
   return (
-    <section>
-      <h2>Contact</h2>
-      <form onSubmit={handleSubmit}>
+    <section className="contact-container">
+      <h2>Contact Me</h2>
+      <form onSubmit={handleSubmit} className="contact-form">
         <input
           type="text"
-          placeholder="Name"
+          placeholder="Your Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           onBlur={(e) => !e.target.value && setFormError('Name is required')}
+          className="form-control"
         />
         <input
           type="email"
-          placeholder="Email Address"
+          placeholder="Your Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           onBlur={(e) => validateEmail(e.target.value)}
+          className="form-control"
         />
         {emailError && <div className="notification">{emailError}</div>}
         <textarea
-          placeholder="Message"
+          placeholder="Your Message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           onBlur={(e) => !e.target.value && setFormError('Message is required')}
+          className="form-control"
         />
         {formError && <div className="notification">{formError}</div>}
-        <button type="submit">Send Message</button>
+        <button type="submit" className="submit-button">Send Message</button>
       </form>
     </section>
   );
