@@ -24,7 +24,7 @@ main {
 
 /* Footer specific styles */
 .footer {
-  text-align: center;
+  text-align: left;  /* Align text to the left */
   padding: 10px 10px;
   width: 100%;
   position: fixed;
