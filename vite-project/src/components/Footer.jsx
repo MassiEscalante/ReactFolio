@@ -3,8 +3,8 @@ import { Container } from 'react-bootstrap';  // Correctly importing Container f
 
 function Footer() {
   return (
-    <footer className="footer bg-dark text-white mt-5">
-      <Container className="py-3">
+    <footer className="footer bg-dark text-white">
+      <Container fluid className="py-3"> {/* Make sure the container is fluid */}
         <p className="text-center mb-0">
           Connect with me on 
           <a href="https://github.com" className="text-white"> GitHub</a>, 
