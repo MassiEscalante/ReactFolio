@@ -24,12 +24,30 @@ main {
 
 /* Footer specific styles */
 .footer {
-  text-align: left;  /* Align text to the left */
+  text-align: left;
   padding: 10px 10px;
   width: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
+}
+
+.footer a {
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth animation for size and color */
+}
+
+.footer a:hover {
+  transform: scale(1.2); /* Icons will grow when hovered */
+  color: #FFD23F; /* Change color to match the theme */
+}
+
+.footer svg {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer svg:hover {
+  transform: rotate(360deg); /* Add a rotating effect */
+  color: #FFD23F; /* Change the icon color when hovered */
 }
 
 /* Remove this rule or adjust it for SVGs to be visible */

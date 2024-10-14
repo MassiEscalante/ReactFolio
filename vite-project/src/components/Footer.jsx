@@ -5,7 +5,7 @@ import { GitHub, Linkedin, Twitter } from 'react-feather';
 function Footer() {
   return (
     <footer className="footer bg-dark text-white">
-      <Container fluid className="py-3 d-flex justify-content-start"> {/* Added d-flex and justify-content-start */}
+      <Container fluid className="py-3 d-flex justify-content-start">
         <p className="mb-0">
           Connect with me on 
           <a href="https://github.com" className="text-white mx-2" target="_blank" rel="noopener noreferrer">
