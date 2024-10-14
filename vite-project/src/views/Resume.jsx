@@ -4,6 +4,7 @@ function Resume() {
   return (
     <section>
       <h2>Resume</h2>
+      {/* Original "Download Resume" link */}
       <a href="path-to-your-resume.pdf" download="Resume.pdf">Download Resume</a>
       <ul>
         <li>Proficiency in JavaScript</li>
@@ -16,3 +17,4 @@ function Resume() {
 }
 
 export default Resume;
+

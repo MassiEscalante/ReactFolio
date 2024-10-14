@@ -3,26 +3,52 @@ import Project from '../components/Project';
 
 function Portfolio() {
   const projects = [
-    { title: 'Project 1', imageUrl: 'path-to-image-1.jpg', demoUrl: '#', repoUrl: '#' },
-    { title: 'Project 2', imageUrl: 'path-to-image-2.jpg', demoUrl: '#', repoUrl: '#' },
-    { title: 'Project 3', imageUrl: 'path-to-image-3.jpg', demoUrl: '#', repoUrl: '#' },
-    { title: 'Project 4', imageUrl: 'path-to-image-4.jpg', demoUrl: '#', repoUrl: '#' },
-    { title: 'Project 5', imageUrl: 'path-to-image-5.jpg', demoUrl: '#', repoUrl: '#' },
-    { title: 'Project 6', imageUrl: 'path-to-image-6.jpg', demoUrl: '#', repoUrl: '#' },
+    { 
+      title: 'WeatherQuest', 
+      imageUrl: 'src/assets/weatherquest.png', 
+      demoUrl: 'https://weatherquest2.onrender.com', 
+      repoUrl: 'https://github.com/MassiEscalante/WeatherQuest2' 
+    },
+    { 
+      title: 'Birdle Word Game', 
+      imageUrl: 'src/assets/Birdle.png', 
+      demoUrl: 'https://kenhie94.github.io/Birdle/', 
+      repoUrl: 'https://github.com/Kenhie94/Birdle' 
+    },
+    { 
+      title: 'RideLab', 
+      imageUrl: 'src/assets/Ridelabpic.png', 
+      demoUrl: 'https://app.screencastify.com/v3/watch/G2EY1tsw1xZFGBhuRoWP', 
+      repoUrl: 'https://github.com/MassiEscalante/RideLab' 
+    },
+    { 
+      title: 'ReadMEmagic (Automatic ReadME Generator)', 
+      imageUrl: 'src/assets/readmemagicpic.png', 
+      demoUrl: 'https://app.screencastify.com/v3/watch/wgkoaQG9Lc8Fg6nGUaIw', 
+      repoUrl: 'https://github.com/MassiEscalante/READMEmagic' 
+    },
+    { 
+      title: 'CrewControl', 
+      imageUrl: 'src/assets/CrewControlpic.png', 
+      demoUrl: 'https://drive.google.com/file/d/14qt-jM6r3uuaPOHfZ1pXUU6ct50HdUFr/view?pli=1', 
+      repoUrl: 'https://github.com/MassiEscalante/CrewControl' 
+    },
   ];
 
   return (
-    <section>
+    <section className="portfolio">
       <h2>Portfolio</h2>
-      {projects.map((project, index) => (
-        <Project
-          key={index}
-          title={project.title}
-          imageUrl={project.imageUrl}
-          demoUrl={project.demoUrl}
-          repoUrl={project.repoUrl}
-        />
-      ))}
+      <div className="project-grid">
+        {projects.map((project, index) => (
+          <Project
+            key={index}
+            title={project.title}
+            imageUrl={project.imageUrl}
+            demoUrl={project.demoUrl}
+            repoUrl={project.repoUrl}
+          />
+        ))}
+      </div>
     </section>
   );
 }
