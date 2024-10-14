@@ -22,6 +22,22 @@ main {
   text-align: center;
 }
 
+/* Footer specific styles */
+.footer {
+  text-align: center;
+  padding: 10px 10px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/* Remove this rule or adjust it for SVGs to be visible */
+svg {
+  width: auto;
+  height: auto;
+}
+
 /* Enhanced Sticky Navbar with Fixed Position */
 .navbar {
   position: fixed; /* Permanently fix the navbar at the top */
@@ -88,23 +104,7 @@ main {
   color: #FFD23F !important;
 }
 
-/* Footer specific styles */
-.footer {
-  text-align: center;
-  padding: 10px 10px;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-}
-
 /* Gooey Effect SVG Filter */
-svg {
-  position: absolute;
-  width: 0;
-  height: 0;
-}
-
 #goo {
   filter: url(#goo-effect);
 }

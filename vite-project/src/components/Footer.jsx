@@ -1,15 +1,22 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';  // Correctly importing Container from 'react-bootstrap'
+import { Container } from 'react-bootstrap';
+import { GitHub, Linkedin, Twitter } from 'react-feather';  // Import the Feather icons
 
 function Footer() {
   return (
     <footer className="footer bg-dark text-white">
-      <Container fluid className="py-3"> {/* Make sure the container is fluid */}
+      <Container fluid className="py-3">
         <p className="text-center mb-0">
           Connect with me on 
-          <a href="https://github.com" className="text-white"> GitHub</a>, 
-          <a href="https://linkedin.com" className="text-white"> LinkedIn</a>, or 
-          <a href="https://twitter.com" className="text-white"> Twitter</a>.
+          <a href="https://github.com" className="text-white mx-2" target="_blank" rel="noopener noreferrer">
+            <GitHub size={24} />  {/* Added size to ensure visibility */}
+          </a>
+          <a href="https://linkedin.com" className="text-white mx-2" target="_blank" rel="noopener noreferrer">
+            <Linkedin size={24} />
+          </a>
+          <a href="https://twitter.com" className="text-white mx-2" target="_blank" rel="noopener noreferrer">
+            <Twitter size={24} />
+          </a>
         </p>
       </Container>
     </footer>
@@ -17,4 +24,5 @@ function Footer() {
 }
 
 export default Footer;
+
 
