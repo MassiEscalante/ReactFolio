@@ -1,44 +1,55 @@
 // src/components/Navigation.jsx
 import React, { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
 import feather from 'feather-icons';
-import './Navbar.css';  // Import the CSS for the gooey effect
+import './Navbar.css';  // Ensure your CSS is linked properly
 
 function Navigation() {
   useEffect(() => {
-    // Replace Feather icons after the component renders
-    feather.replace({ color: '#FFD23F' }); // Ensure icons are yellow
+    feather.replace();
   }, []);
 
   return (
-    <nav className="navbar">
-      <ul className="navbar__menu">
-        <li className="navbar__item">
-          <NavLink to="/" className="nav-link">
-            <i data-feather="home"></i>
-            <span>About Me</span> {/* Keep text aligned next to icon */}
-          </NavLink>
-        </li>
-        <li className="navbar__item">
-          <NavLink to="/portfolio" className="nav-link">
-            <i data-feather="folder"></i>
-            <span>Portfolio</span> {/* Keep text aligned next to icon */}
-          </NavLink>
-        </li>
-        <li className="navbar__item">
-          <NavLink to="/contact" className="nav-link">
-            <i data-feather="message-square"></i>
-            <span>Contact</span> {/* Keep text aligned next to icon */}
-          </NavLink>
-        </li>
-        <li className="navbar__item">
-          <NavLink to="/resume" className="nav-link">
-            <i data-feather="file-text"></i>
-            <span>Resume</span> {/* Keep text aligned next to icon */}
-          </NavLink>
-        </li>
-      </ul>
-    </nav>
+    <>
+      <nav className="navbar">
+        <ul className="navbar__menu">
+          <li className="navbar__item">
+            <a href="/" className="nav-link">
+              <i data-feather="home"></i>
+              <span>Home</span> {/* Icon and text */}
+            </a>
+          </li>
+          <li className="navbar__item">
+            <a href="/messages" className="nav-link">
+              <i data-feather="message-square"></i>
+              <span>Messages</span>
+            </a>
+          </li>
+          <li className="navbar__item">
+            <a href="/customers" className="nav-link">
+              <i data-feather="users"></i>
+              <span>Customers</span>
+            </a>
+          </li>
+          {/* Add more items here as needed */}
+        </ul>
+      </nav>
+
+      {/* SVG for the gooey effect */}
+      <svg>
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+              result="goo"
+            />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+      </svg>
+    </>
   );
 }
 
