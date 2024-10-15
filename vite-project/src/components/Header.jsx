@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { Database, Briefcase, PhoneCall, FileText } from 'react-feather';  // Import Feather icons
 
 function Header() {
   return (
@@ -10,10 +11,18 @@ function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto"> {/* ms-auto to move links to the right */}
-            <Nav.Link as={Link} to="/">About Me</Nav.Link>
-            <Nav.Link as={Link} to="/portfolio">Portfolio</Nav.Link>
-            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
-            <Nav.Link as={Link} to="/resume">Resume</Nav.Link>
+            <Nav.Link as={Link} to="/">
+              <Database size={20} />  {/* About Me Icon */}
+            </Nav.Link>
+            <Nav.Link as={Link} to="/portfolio">
+              <Briefcase size={20} />  {/* Portfolio Icon */}
+            </Nav.Link>
+            <Nav.Link as={Link} to="/contact">
+              <PhoneCall size={20} />  {/* Contact Icon */}
+            </Nav.Link>
+            <Nav.Link as={Link} to="/resume">
+              <FileText size={20} />  {/* Resume Icon */}
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
