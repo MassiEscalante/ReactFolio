@@ -20,7 +20,6 @@ main {
 .header {
   height: 80px;
   padding: 10px 20px;
-  background-color: #540D6E;
   color: #FFD23F;
   display: flex;
   align-items: center;
@@ -48,15 +47,15 @@ main {
   color: #FFD23F;
 }
 
+/* Combined SVG adjustment */
+svg, .footer svg {  /* <--- Combined these two rules */
+  width: auto;
+  height: auto;
+}
+
 .footer svg:hover {
   transform: rotate(360deg);
   color: #FFD23F;
-}
-
-/* SVG adjustment */
-svg {
-  width: auto;
-  height: auto;
 }
 
 /* Navbar styles */
@@ -104,7 +103,7 @@ svg {
   margin: 0 10px;
 }
 
-/* Nav Link with hover effect and pop animation */
+/* Combined Nav Link hover effect and pop animation */
 .nav-link {
   color: #FFD23F !important;
   display: flex;
@@ -114,16 +113,13 @@ svg {
   margin-left: 15px;
   background-color: white;
   border-radius: 50px;
-  font-size: 16px;
-  font-weight: bold;
-  transition: color 0.4s ease, letter-spacing 0.3s ease, transform 0.3s ease;
+  transition: color 0.4s ease, transform 0.3s ease;
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  text-transform: uppercase;
 }
 
-.nav-link:hover {
+.nav-link:hover {  /* <--- Combined the hover rules here */
   color: #fff !important;
   letter-spacing: 2px;
   text-shadow: 0px 0px 8px #FFD23F;
@@ -131,6 +127,7 @@ svg {
   padding: 10px;
   border-radius: 20px;
   transform: scale(1.2);
+  filter: url(#goo-hover);  /* <--- Moved from the duplicate rule */
 }
 
 /* Underline effect on hover */
@@ -150,11 +147,6 @@ svg {
   left: 0;
 }
 
-/* Gooey Hover Effect */
-.nav-link:hover {
-  filter: url(#goo-hover);
-}
-
 .nav-link i {
   pointer-events: none;
   color: #FFD23F !important;
@@ -165,9 +157,7 @@ svg {
   filter: url(#goo-effect);
 }
 
-#goo-effect {
-  filter: url(#goo);
-}
+/* Removed duplicate #goo-effect filter */
 
 /* Portfolio Section */
 .project-grid {
@@ -274,9 +264,9 @@ textarea.form-control {
 .submit-button {
   width: 100%;
   padding: 12px 15px;
-  background-color: #540D6E;
+  background-color: #82095a;
   color: #FFD23F;
-  font-size: 18px;
+  font-size: 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -285,7 +275,7 @@ textarea.form-control {
 
 .submit-button:hover {
   background-color: #FFD23F;
-  color: #540D6E;
+  color: #82095a;
 }
 
 .notification {
