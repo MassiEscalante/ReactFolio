@@ -1,7 +1,7 @@
 import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { Database, Briefcase, PhoneCall, FileText } from 'react-feather';  // Import Feather icons
+import { Database, Briefcase, PhoneCall, FileText } from 'react-feather';
 
 function Header() {
   return (
@@ -11,18 +11,45 @@ function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto"> {/* ms-auto to move links to the right */}
-            <Nav.Link as={Link} to="/">
-              <Database size={20} />  {/* About Me Icon */}
-            </Nav.Link>
-            <Nav.Link as={Link} to="/portfolio">
-              <Briefcase size={20} />  {/* Portfolio Icon */}
-            </Nav.Link>
-            <Nav.Link as={Link} to="/contact">
-              <PhoneCall size={20} />  {/* Contact Icon */}
-            </Nav.Link>
-            <Nav.Link as={Link} to="/resume">
-              <FileText size={20} />  {/* Resume Icon */}
-            </Nav.Link>
+            {/* Tooltip for About Me */}
+            <OverlayTrigger
+              placement="bottom"  // Tooltip will appear at the bottom
+              overlay={<Tooltip id="about-tooltip">About Me</Tooltip>}
+            >
+              <Nav.Link as={Link} to="/">
+                <Database size={20} />
+              </Nav.Link>
+            </OverlayTrigger>
+
+            {/* Tooltip for Portfolio */}
+            <OverlayTrigger
+              placement="bottom"  // Tooltip will appear at the bottom
+              overlay={<Tooltip id="portfolio-tooltip">Portfolio</Tooltip>}
+            >
+              <Nav.Link as={Link} to="/portfolio">
+                <Briefcase size={20} />
+              </Nav.Link>
+            </OverlayTrigger>
+
+            {/* Tooltip for Contact */}
+            <OverlayTrigger
+              placement="bottom"  // Tooltip will appear at the bottom
+              overlay={<Tooltip id="contact-tooltip">Contact</Tooltip>}
+            >
+              <Nav.Link as={Link} to="/contact">
+                <PhoneCall size={20} />
+              </Nav.Link>
+            </OverlayTrigger>
+
+            {/* Tooltip for Resume */}
+            <OverlayTrigger
+              placement="bottom"  // Tooltip will appear at the bottom
+              overlay={<Tooltip id="resume-tooltip">Resume</Tooltip>}
+            >
+              <Nav.Link as={Link} to="/resume">
+                <FileText size={20} />
+              </Nav.Link>
+            </OverlayTrigger>
           </Nav>
         </Navbar.Collapse>
       </Container>

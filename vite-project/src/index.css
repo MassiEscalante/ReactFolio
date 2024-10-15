@@ -294,3 +294,14 @@ textarea.form-control {
   font-size: 14px;
   margin-top: 5px;
 }
+/* Custom Tooltip Styling */
+.tooltip-inner {
+  background-color: #0e0d0d !important; /* Matching yellow background */
+  color: #FFD23F !important; /* Shiny teal font color */
+  border-radius: 10px; /* Smooth rounded edges for a more polished look */
+  padding: 8px; /* Add padding for a better look */
+}
+
+.tooltip-arrow::before {
+  border-bottom-color: #0e0d0d !important; /* Make the arrow match the background */
+}
