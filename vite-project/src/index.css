@@ -125,7 +125,6 @@ svg, .footer svg {
   background: radial-gradient(circle, rgba(255,210,63,0.5) 20%, rgba(255,255,255,0) 70%);
   padding: 10px;
   border-radius: 20px;
-  transform: scale(1.2);
 }
 
 /* Active link style */
@@ -162,7 +161,7 @@ svg, .footer svg {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);  /* Set 2 columns per row */
-  gap: 30px;  /* Adds space between projects */
+  gap: 20px;  /* Adds space between projects */
   margin-top: 20px;
 }
 
@@ -173,6 +172,8 @@ svg, .footer svg {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 200px; /* Set a fixed width for square cards */
+  height: 200px; /* Set a fixed height for square cards */
 }
 
 .project-card:hover {
@@ -182,9 +183,10 @@ svg, .footer svg {
 
 .project-image img {
   width: 100%;
-  height: auto;
+  height: 100%; /* Make the image fill the entire card */
   display: block;
   border-radius: 10px;
+  object-fit: cover; /* Ensure the image covers the area without distortion */
 }
 
 /* Text Overlay */
