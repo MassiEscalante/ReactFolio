@@ -1,5 +1,5 @@
-// src/components/Navigation.jsx
 import React, { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import feather from 'feather-icons';
 import './Navbar.css';  // Ensure your CSS is linked properly
 
@@ -9,47 +9,34 @@ function Navigation() {
   }, []);
 
   return (
-    <>
-      <nav className="navbar">
-        <ul className="navbar__menu">
-          <li className="navbar__item">
-            <a href="/" className="nav-link">
-              <i data-feather="home"></i>
-              <span>Home</span> {/* Icon and text */}
-            </a>
-          </li>
-          <li className="navbar__item">
-            <a href="/messages" className="nav-link">
-              <i data-feather="message-square"></i>
-              <span>Messages</span>
-            </a>
-          </li>
-          <li className="navbar__item">
-            <a href="/customers" className="nav-link">
-              <i data-feather="users"></i>
-              <span>Customers</span>
-            </a>
-          </li>
-          {/* Add more items here as needed */}
-        </ul>
-      </nav>
-
-      {/* SVG for the gooey effect */}
-      <svg>
-        <defs>
-          <filter id="goo">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-            <feColorMatrix
-              in="blur"
-              mode="matrix"
-              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
-              result="goo"
-            />
-            <feBlend in="SourceGraphic" in2="goo" />
-          </filter>
-        </defs>
-      </svg>
-    </>
+    <nav className="navbar">
+      <ul className="navbar__menu">
+        <li className="navbar__item">
+          <NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+            <i data-feather="home"></i>
+            <span>About Me</span>
+          </NavLink>
+        </li>
+        <li className="navbar__item">
+          <NavLink to="/portfolio" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+            <i data-feather="briefcase"></i>
+            <span>Projects</span>
+          </NavLink>
+        </li>
+        <li className="navbar__item">
+          <NavLink to="/contact" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+            <i data-feather="phone-call"></i>
+            <span>Contact</span>
+          </NavLink>
+        </li>
+        <li className="navbar__item">
+          <NavLink to="/resume" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+            <i data-feather="file-text"></i>
+            <span>Resume</span>
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
   );
 }
 

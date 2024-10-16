@@ -37,7 +37,7 @@ function Portfolio() {
 
   return (
     <section className="portfolio">
-      <h2>Portfolio</h2>
+      <h2>Projects</h2> {/* Changed the title from "Portfolio" to "Projects" */}
       <div className="project-grid">
         {projects.map((project, index) => (
           <Project
@@ -54,3 +54,4 @@ function Portfolio() {
 }
 
 export default Portfolio;
+

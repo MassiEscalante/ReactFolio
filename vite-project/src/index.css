@@ -48,7 +48,7 @@ main {
 }
 
 /* Combined SVG adjustment */
-svg, .footer svg {  /* <--- Combined these two rules */
+svg, .footer svg {  
   width: auto;
   height: auto;
 }
@@ -103,7 +103,6 @@ svg, .footer svg {  /* <--- Combined these two rules */
   margin: 0 10px;
 }
 
-/* Combined Nav Link hover effect and pop animation */
 .nav-link {
   color: #FFD23F !important;
   display: flex;
@@ -113,13 +112,13 @@ svg, .footer svg {  /* <--- Combined these two rules */
   margin-left: 15px;
   background-color: white;
   border-radius: 50px;
-  transition: color 0.4s ease, transform 0.3s ease;
+  transition: color 0.4s ease, transform 0.3s ease, background-color 0.4s ease;
   text-decoration: none;
   position: relative;
   overflow: hidden;
 }
 
-.nav-link:hover {  /* <--- Combined the hover rules here */
+.nav-link:hover {
   color: #fff !important;
   letter-spacing: 2px;
   text-shadow: 0px 0px 8px #FFD23F;
@@ -127,10 +126,17 @@ svg, .footer svg {  /* <--- Combined these two rules */
   padding: 10px;
   border-radius: 20px;
   transform: scale(1.2);
-  filter: url(#goo-hover);  /* <--- Moved from the duplicate rule */
 }
 
-/* Underline effect on hover */
+/* Active link style */
+.nav-link.active {
+  font-weight: bold;  
+  color: white;  
+  background-color: #FFD23F;  
+  padding: 10px 20px;  
+  border-radius: 10px;  
+}
+
 .nav-link::before {
   content: '';
   position: absolute;
@@ -152,18 +158,11 @@ svg, .footer svg {  /* <--- Combined these two rules */
   color: #FFD23F !important;
 }
 
-/* Gooey Effect SVG Filter */
-#goo {
-  filter: url(#goo-effect);
-}
-
-/* Removed duplicate #goo-effect filter */
-
 /* Portfolio Section */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);  /* Set 2 columns per row */
+  gap: 30px;  /* Adds space between projects */
   margin-top: 20px;
 }
 
