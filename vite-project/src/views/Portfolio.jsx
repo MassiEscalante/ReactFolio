@@ -37,8 +37,8 @@ function Portfolio() {
 
   return (
     <section className="portfolio">
-      <h2>Projects</h2> {/* Changed the title from "Portfolio" to "Projects" */}
-      <div className="project-grid">
+      <h2>Projects</h2> {/* Clearer title */}
+      <div className="project-grid"> {/* Grid layout for projects */}
         {projects.map((project, index) => (
           <Project
             key={index}
@@ -54,4 +54,3 @@ function Portfolio() {
 }
 
 export default Portfolio;
-

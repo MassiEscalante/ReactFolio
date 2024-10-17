@@ -39,7 +39,6 @@ function About() {
         <div style={{ flex: '2', textAlign: 'center', padding: '0 20px' }}>
           <h3>My Qualifications</h3>
           <p>
-          
             This project demonstrates my ability to work with modern frameworks like React and development tools like Vite. 
             From setting up the environment to implementing reusable components, I have focused on performance, responsive design, and a smooth user experience.
           </p>

@@ -16,3 +16,4 @@ function Project({ title, imageUrl, demoUrl, repoUrl }) {
 }
 
 export default Project;
+

@@ -160,9 +160,17 @@ svg, .footer svg {
 /* Portfolio Section */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);  /* Set 2 columns per row */
-  gap: 20px;  /* Adds space between projects */
+  grid-template-columns: repeat(2, 1fr);  /* Always 2 columns per row */
+  gap: 20px;  /* Space between the projects */
   margin-top: 20px;
+  padding: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;  /* Change to 1 column for small screens */
+  }
 }
 
 /* Project Card */
@@ -172,8 +180,8 @@ svg, .footer svg {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 200px; /* Set a fixed width for square cards */
-  height: 200px; /* Set a fixed height for square cards */
+  width: 100%;
+  height: 250px; /* Adjust height to balance the card design */
 }
 
 .project-card:hover {
@@ -183,10 +191,9 @@ svg, .footer svg {
 
 .project-image img {
   width: 100%;
-  height: 100%; /* Make the image fill the entire card */
-  display: block;
+  height: 100%;
+  object-fit: cover;
   border-radius: 10px;
-  object-fit: cover; /* Ensure the image covers the area without distortion */
 }
 
 /* Text Overlay */
@@ -196,7 +203,7 @@ svg, .footer svg {
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   opacity: 0;
   transition: opacity 0.3s ease;
