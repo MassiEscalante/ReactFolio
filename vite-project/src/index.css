@@ -365,8 +365,8 @@ textarea.form-control {
 }
 .contact-animation-container {
   position: fixed;  /* Keeps the animation fixed as you scroll */
-  bottom: 20px;     /* Align the animation to the bottom */
-  left: 20px;       /* Align the animation to the left */
+  bottom: -10px;     /* Align the animation to the bottom */
+  left: -15px;       /* Align the animation to the left */
   width: 300px;
   height: auto;
   z-index: 10;      /* Ensure it stays above other elements */
