@@ -387,7 +387,7 @@ textarea.form-control {
   padding: 40px;
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);  /* Soft shadow */
 }
 
 /* Resume Title */
@@ -423,62 +423,15 @@ textarea.form-control {
   color: #540D6E;
 }
 
-/* Proficiency List */
+/* Proficiency List - Cleaner, Simpler */
 .proficiency-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  list-style-type: disc;  /* Standard bullet points */
+  padding-left: 20px;     /* Add padding to indent the list */
 }
 
 .proficiency-list li {
-  background-color: #f9f9f9;
-  padding: 15px 20px;
-  margin: 10px;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #333;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-  cursor: default;
-}
-
-.proficiency-list li:hover {
-  transform: scale(1.05);
-  background-color: #540D6E;
-  color: #fff;
-}
-
-/* Proficiency List */
-.proficiency-list li {
-  background-color: #f9f9f9;
-  padding: 15px 20px;
-  margin: 10px;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #333;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: default;
-}
-
-/* Pink Glow on Hover */
-.proficiency-list li:hover {
-  transform: scale(1.05);
-  background-color: #540D6E;
-  color: #fff;
-  box-shadow: 0 10px 20px rgba(255, 0, 160, 0.4);  /* Initial soft magenta glow */
-  animation: glow 1.5s infinite alternate;  /* Apply the pulsing glow animation */
-}
-
-@keyframes glow {
-  from {
-    box-shadow: 0 10px 20px rgba(255, 0, 160, 0.4);  /* Initial glow */
-  }
-  to {
-    box-shadow: 0 10px 40px rgba(255, 0, 160, 0.8);  /* Stronger glow */
-  }
+  font-size: 1.2rem;
+  font-weight: 500;        /* Regular weight */
+  margin: 10px 0;          /* Add space between items */
+  color: #333;             /* Clean text color */
 }
