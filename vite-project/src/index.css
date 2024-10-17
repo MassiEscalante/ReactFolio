@@ -278,6 +278,12 @@ svg, .footer svg {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.portfolio h2 {
+  margin-left: -500px;  /* Move the title to the left, aligned with the project grid */
+  font-size: 2rem;     /* Optional: Adjust font size for a more prominent title */
+  color: #333;         /* Optional: Add color to the title */
+}
+
 h2 {
   text-align: center;
   color: #540D6E;
