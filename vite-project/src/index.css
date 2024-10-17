@@ -26,7 +26,7 @@ main {
   justify-content: center;
   text-align: center;
 }
-
+/* Footer stays fixed at the bottom */
 .footer {
   text-align: left;
   padding: 10px 10px;
@@ -35,6 +35,9 @@ main {
   bottom: 0;
   left: 0;
   font-family: 'Oxanium', sans-serif;
+  background-color: #540D6E;  /* Add a background color to distinguish it */
+  color: #fff;
+  z-index: 1000;  /* Ensure it stays on top of other elements */
 }
 
 /* Footer links and icons */
@@ -47,7 +50,7 @@ main {
   color: #FFD23F;
 }
 
-/* Combined SVG adjustment */
+/* SVG adjustments */
 svg, .footer svg {  
   width: auto;
   height: auto;
@@ -56,6 +59,11 @@ svg, .footer svg {
 .footer svg:hover {
   transform: rotate(360deg);
   color: #FFD23F;
+}
+
+/* Main content needs padding at the bottom to avoid being hidden behind the footer */
+#root {
+  padding-bottom: 60px;  /* Add padding equal to or greater than the footer height */
 }
 
 /* Navbar styles */
@@ -365,21 +373,24 @@ textarea.form-control {
 
 /* Animation Container */
 .animation-container {
-  position: fixed;  /* Keeps the animation fixed as you scroll */
-  top: 100px;       /* Adjust the vertical position */
-  left: 20px;       /* Align the animation to the left */
+  position: fixed;
+  top: 100px;
+  left: 20px;
   width: 300px;
   height: auto;
-  z-index: 10;      /* Ensure it stays above other elements */
+  z-index: 10;  /* Keeps animation above other elements */
 }
+
+/* Contact Animation Container */
 .contact-animation-container {
-  position: fixed;  /* Keeps the animation fixed as you scroll */
-  bottom: -10px;     /* Align the animation to the bottom */
-  left: -15px;       /* Align the animation to the left */
+  position: fixed;
+  bottom: -30px;  /* Adjusted to move the animation slightly above the footer */
+  left: -30px;    /* Align the animation to the left */
   width: 300px;
   height: auto;
-  z-index: 10;      /* Ensure it stays above other elements */
+  z-index: 1100;  /* Higher z-index to ensure the animation stays above the footer */
 }
+
 /* Resume Page Container */
 .resume-container {
   max-width: 800px;
