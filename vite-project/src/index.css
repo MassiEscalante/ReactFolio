@@ -176,50 +176,65 @@ svg, .footer svg {
 }
 
 /* Project Card */
-.project-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 15px;  /* Softer, rounded corners */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 250px;  /* Fixed square width */
-  height: 200px; /* Fixed square height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
+  .project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;  /* Softer, rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth hover transition */
+    width: 250px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 5px solid transparent;  /* Initially transparent border */
+    transition: border 0.3s ease, transform 0.3s ease;  /* Smooth transition for the border */
+ 
+ }
+
+ .project-card:hover {
+ 
+  transform: scale(1.05);  /* Slight scale on hover */
+  border-color: #ef59ec;  /* Magenta/pink border appears on hover */
+  box-shadow: 0 10px 20px rgba(255, 0, 160, 0.4);  /* Slight magenta glow on hover */
+  animation: glow 1.5s infinite alternate;  /* Apply the pulsing glow animation */
 }
 
-.project-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+@keyframes glow {
+  from {
+    box-shadow: 0 10px 20px rgba(255, 0, 160, 0.4);  /* Initial soft magenta glow */
+  }
+  to {
+    box-shadow: 0 10px 40px rgba(255, 0, 160, 0.8);  /* Stronger magenta glow */
+  }
 }
 
 /* Project Image */
 .project-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* Ensures the image fits the square without distortion */
+  object-fit: cover;  /* Ensures the image fills the square without distortion */
   border-radius: 15px;  /* Matches the card's rounded corners */
   display: block;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease;  /* Smooth zoom on hover */
 }
 
 .project-card:hover img {
-  transform: scale(1.1);  /* Zoom the image slightly on hover */
+  transform: scale(1.1);  /* Slight zoom-in effect on the image when hovering */
 }
 
 /* Text Overlay */
 .overlay {
   position: absolute;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7);  /* Dark overlay at the bottom */
   color: #fff;
   width: 100%;
   padding: 15px;
   text-align: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;  /* Smooth fade-in effect for overlay */
 }
 
 .project-card:hover .overlay {
@@ -235,21 +250,21 @@ svg, .footer svg {
 }
 
 .overlay a {
-  color: #ffd23f;  /* Bright, standout color for links */
+  color: #ffd23f;  /* Yellow color for the links */
   text-decoration: none;
   margin: 10px;
   display: inline-block;
   font-size: 0.9rem;
   font-weight: bold;
   padding: 8px 12px;
-  background-color: rgba(255, 255, 255, 0.1);  /* Subtle background on hover */
+  background-color: rgba(255, 255, 255, 0.1);  /* Subtle background for links */
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;  /* Smooth transition for link hover */
 }
 
 .overlay a:hover {
-  background-color: #ffd23f;
-  color: #000;
+  background-color: #ffd23f;  /* Yellow background on hover */
+  color: #000;  /* Black text color on hover */
 }
 
 /* Contact Form Styling */
