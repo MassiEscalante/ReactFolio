@@ -1,15 +1,23 @@
 import React from 'react';
+import { FaDownload } from 'react-icons/fa';  // Adding an icon for the download button
 
 function Resume() {
   return (
-    <section>
+    <section className="resume-container">
       <h2>Resume</h2>
-      {/* Original "Download Resume" link */}
-      <a href="path-to-your-resume.pdf" download="Resume.pdf">Download Resume</a>
-      <ul>
-        <li>Proficiency in JavaScript</li>
-        <li>Experience with React and Redux</li>
-        <li>Understanding of RESTful APIs</li>
+      
+      {/* Polished "Download Resume" button */}
+      <a href="path-to-your-resume.pdf" download="Resume.pdf" className="download-button">
+        <FaDownload /> Download Resume
+      </a>
+
+      <h3>Proficiencies</h3>
+      <ul className="proficiency-list">
+        <li>JavaScript</li>
+        <li>React & Redux</li>
+        <li>RESTful APIs</li>
+        <li>Node.js & Express</li>
+        <li>MongoDB & SQL</li>
         {/* Add more proficiencies as needed */}
       </ul>
     </section>
@@ -17,4 +25,3 @@ function Resume() {
 }
 
 export default Resume;
-

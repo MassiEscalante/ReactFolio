@@ -271,11 +271,12 @@ svg, .footer svg {
 /* Contact Form Styling */
 .contact-container {
   max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+  margin: 0 auto;  /* Center the form horizontally */
+  padding: 30px;
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;  /* Rounded corners for a modern look */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
+  transition: all 0.3s ease;
 }
 
 .portfolio h2 {
@@ -302,16 +303,20 @@ h2 {
 
 .form-control {
   width: 100%;
-  padding: 12px 15px;
+  padding: 15px;
+  margin-bottom: 20px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 16px;
-  transition: border-color 0.3s ease-in-out;
+  background-color: #f9f9f9;  /* Light background for input fields */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);  /* Slight inner shadow for depth */
+  transition: border-color 0.3s ease;
 }
 
 .form-control:focus {
-  border-color: #540D6E;
-  outline: none;
+  border-color: #540D6E;  /* Highlight border on focus */
+  background-color: #fff;  /* Change background on focus */
+  outline: none;  /* Remove default outline */
 }
 
 textarea.form-control {
@@ -319,27 +324,31 @@ textarea.form-control {
   resize: vertical;
 }
 
+/* Submit Button */
 .submit-button {
   width: 100%;
-  padding: 12px 15px;
-  background-color: #82095a;
-  color: #FFD23F;
-  font-size: 20px;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #540D6E;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
   background-color: #FFD23F;
-  color: #82095a;
+  color: #540D6E;
 }
 
+/* Error Notification */
 .notification {
   color: red;
   font-size: 14px;
-  margin-top: 5px;
+  margin-top: -15px;
+  margin-bottom: 20px;
 }
 
 /* Custom Tooltip Styling */
@@ -370,4 +379,106 @@ textarea.form-control {
   width: 300px;
   height: auto;
   z-index: 10;      /* Ensure it stays above other elements */
+}
+/* Resume Page Container */
+.resume-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
+}
+
+/* Resume Title */
+.resume-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #540D6E;
+}
+
+/* Download Button */
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  background-color: #540D6E;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.download-button svg {
+  margin-right: 10px;
+}
+
+.download-button:hover {
+  background-color: #FFD23F;
+  color: #540D6E;
+}
+
+/* Proficiency List */
+.proficiency-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.proficiency-list li {
+  background-color: #f9f9f9;
+  padding: 15px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.proficiency-list li:hover {
+  transform: scale(1.05);
+  background-color: #540D6E;
+  color: #fff;
+}
+
+/* Proficiency List */
+.proficiency-list li {
+  background-color: #f9f9f9;
+  padding: 15px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+/* Pink Glow on Hover */
+.proficiency-list li:hover {
+  transform: scale(1.05);
+  background-color: #540D6E;
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(255, 0, 160, 0.4);  /* Initial soft magenta glow */
+  animation: glow 1.5s infinite alternate;  /* Apply the pulsing glow animation */
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 10px 20px rgba(255, 0, 160, 0.4);  /* Initial glow */
+  }
+  to {
+    box-shadow: 0 10px 40px rgba(255, 0, 160, 0.8);  /* Stronger glow */
+  }
 }
