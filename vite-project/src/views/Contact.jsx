@@ -31,6 +31,20 @@ function Contact() {
   return (
     <section className="contact-container">
       <h2>Contact Me</h2>
+
+      {/* Updated Lottie Animation with a unique class for the Contact page */}
+      <div className="contact-animation-container">
+        <dotlottie-player
+          src="https://lottie.host/f7da4991-81b1-41b1-8a36-a54df8ba53b9/S1fLnJ3cl7.json"
+          background="transparent"
+          speed="1"
+          style={{ width: "300px", height: "300px" }}
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
+
+      {/* Contact Form */}
       <form onSubmit={handleSubmit} className="contact-form">
         <input
           type="text"
