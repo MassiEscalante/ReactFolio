@@ -7,7 +7,7 @@ Welcome to my **Developer Portfolio**! This is where I showcase all the amazing 
 ![Portfolio Screenshot](./vite-project/src/assets/portfinal.png) 
 
 ### Why did I build this? 🤔  
-As a passionate developer, I wanted a space to:
+As a developer, I wanted a space to:
 - Share my **skills** and **projects** with the world.
 - Provide potential employers and collaborators with an easy way to explore my **technical abilities**.
 - Highlight the challenges I’ve overcome and demonstrate my continuous learning.
