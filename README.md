@@ -4,6 +4,8 @@
 
 Welcome to my **Developer Portfolio**! This is where I showcase all the amazing projects I’ve built throughout my coding journey. 💻
 
+![Portfolio Screenshot](./vite-project/src/assets/portfinal.png) 
+
 ### Why did I build this? 🤔  
 As a passionate developer, I wanted a space to:
 - Share my **skills** and **projects** with the world.
