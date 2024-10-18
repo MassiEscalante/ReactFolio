@@ -56,7 +56,7 @@ In future iterations of my portfolio, I plan to:
 
 ## 🌍 Deployed Link
 
-Check out my live portfolio here: [Massiel's Developer Portfolio](https://your-portfolio-link.com) 🚀
+Check out my live portfolio here: [Massiel's Developer Portfolio](https://kaleidoscopic-meerkat-be4947.netlify.app/) 🚀
 
 ## 📜 License
 
