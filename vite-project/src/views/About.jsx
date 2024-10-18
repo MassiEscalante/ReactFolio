@@ -29,7 +29,7 @@ function About() {
         {/* Profile Picture */}
         <div style={{ flex: '1', marginLeft: '50px', marginRight: '20px', marginTop: '-140px', textAlign: 'left' }}> 
           <img
-            src="/src/assets/marlopic.PNG"
+            src="/assets/marlopic.PNG"  // Updated image path
             alt="Profile Picture"
             style={{ width: '150px', borderRadius: '50%', marginBottom: '20px' }}
           />

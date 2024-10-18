@@ -5,31 +5,31 @@ function Portfolio() {
   const projects = [
     { 
       title: 'WeatherQuest', 
-      imageUrl: 'src/assets/weatherquest.png', 
+      imageUrl: '/assets/weatherquest.png',  // Updated path
       demoUrl: 'https://weatherquest2.onrender.com', 
       repoUrl: 'https://github.com/MassiEscalante/WeatherQuest2' 
     },
     { 
       title: 'Birdle Word Game', 
-      imageUrl: 'src/assets/Birdle.png', 
+      imageUrl: '/assets/Birdle.png',  // Updated path
       demoUrl: 'https://kenhie94.github.io/Birdle/', 
       repoUrl: 'https://github.com/Kenhie94/Birdle' 
     },
     { 
       title: 'RideLab', 
-      imageUrl: 'src/assets/Ridelabpic.png', 
+      imageUrl: '/assets/Ridelabpic.png',  // Updated path
       demoUrl: 'https://app.screencastify.com/v3/watch/G2EY1tsw1xZFGBhuRoWP', 
       repoUrl: 'https://github.com/MassiEscalante/RideLab' 
     },
     { 
       title: 'ReadMEmagic (Automatic ReadME Generator)', 
-      imageUrl: 'src/assets/readmemagicpic.png', 
+      imageUrl: '/assets/readmemagicpic.png',  // Updated path
       demoUrl: 'https://app.screencastify.com/v3/watch/wgkoaQG9Lc8Fg6nGUaIw', 
       repoUrl: 'https://github.com/MassiEscalante/READMEmagic' 
     },
     { 
       title: 'CrewControl', 
-      imageUrl: 'src/assets/CrewControlpic.png', 
+      imageUrl: '/assets/CrewControlpic.png',  // Updated path
       demoUrl: 'https://drive.google.com/file/d/14qt-jM6r3uuaPOHfZ1pXUU6ct50HdUFr/view?pli=1', 
       repoUrl: 'https://github.com/MassiEscalante/CrewControl' 
     },
